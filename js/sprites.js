@@ -25,8 +25,7 @@ function drawTree(t, x, y){
 }
 
 function drawRock(r, x, y){
-  const s = r.shake > 0 ? (Math.random()-0.5)*4 : 0;
-  x = Math.round(x + s); y = Math.round(y);
+  x = Math.round(x); y = Math.round(y);
   R(x-9, y-3, 18, 4, 'rgba(0,0,0,0.22)');
   const c1 = r.ore ? ITEMS[r.ore].color : '#82828e';
   const c2 = r.ore ? ITEMS[r.ore].color2 : '#5c5c68';
@@ -143,8 +142,7 @@ function drawRuin(ruin,x,y){
   if(!ruin.opened){R(x-2,y-5,4,3,'#e1bd73');R(x-1,y-5,2,4,'#433a2b');}
 }
 function drawBush(b, x, y){
-  const s = b.shake > 0 ? (Math.random()-0.5)*3 : 0;
-  x = Math.round(x + s); y = Math.round(y);
+  x = Math.round(x); y = Math.round(y);
   R(x-7, y-2, 14, 3, 'rgba(0,0,0,0.2)');
   R(x-6, y-8, 12, 6, '#2a5f2a');
   R(x-5, y-10, 10, 4, '#357a35');
